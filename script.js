@@ -1,4 +1,4 @@
-const PRE = "DELTA";
+const PRE = "JHCSC";
 const SUF = "MEET";
 var room_id;
 var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
