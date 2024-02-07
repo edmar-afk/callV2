@@ -4,7 +4,14 @@ var room_id;
 var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 var local_stream;
 var screenStream;
-var peer = null;
+const peer = new Peer({ 
+    config: {
+        iceServers: [
+            { urls: 'stun:stun.l.google.com:19302' }, 
+            { urls: 'turn:https://edmar-afk.github.io/callV2/', username: PRE, credential: SUF } 
+        ]
+    }
+});
 var currentPeer = null;
 var screenSharing = false;
 function createRoom() {
