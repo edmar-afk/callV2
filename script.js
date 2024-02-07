@@ -8,7 +8,7 @@ const peer = new Peer({
     config: {
         iceServers: [
             { urls: 'stun:stun.l.google.com:19302' }, 
-            { urls: 'turn:https://edmar-afk.github.io/callV2/', username: PRE, credential: SUF } 
+            { urls: 'turn:https://edmar-afk.github.io/callV2/', username: PRE + SUF, credential: room_id } 
         ]
     }
 });
