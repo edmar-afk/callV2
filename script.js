@@ -1,7 +1,7 @@
 const PRE = "JHCSC";
 const SUF = "MEET";
 const ICE_SERVERS = [
-  { url: 'stun:freeturn.net:5349' }, 
+  { url: 'stun:stun.l.google.com:19302' },
   { url: 'turns:freeturn.tel:5349', username: 'free', credential: 'free' }
 ];
 var room_id;
