@@ -1,8 +1,8 @@
 const PRE = "JHCSC";
 const SUF = "MEET";
 const ICE_SERVERS = [
-  { url: 'stun:stun.l.google.com:19302' },
-  { url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
+  { urls: 'stun:freeturn.net:5349' }, 
+ { urls: 'turns:freeturn.tel:5349', username: 'free', credential: 'free' } ]
 ];
 var room_id;
 var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
