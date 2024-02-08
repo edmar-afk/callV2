@@ -1,8 +1,9 @@
 const PRE = "JHCSC";
 const SUF = "MEET";
-const STUN_SERVER = {
-  urls: 'stun:stun.l.google.com:19302' // You can replace this with your preferred STUN server
-};
+const ICE_SERVERS = [
+  { url: 'stun:stun.l.google.com:19302' },
+  { url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
+];
 var room_id;
 var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 var local_stream;
@@ -21,7 +22,7 @@ function createRoom() {
     room_id = PRE + room + SUF;
     peer = new Peer(room_id, {
         config: {
-            iceServers: [STUN_SERVER]
+            iceServers: ICE_SERVERS
         }
     });
     peer.on("open", (id) => {
@@ -85,7 +86,7 @@ function joinRoom() {
     hideModal();
     peer = new Peer(undefined, {
         config: {
-            iceServers: [STUN_SERVER]
+            iceServers: ICE_SERVERS
         }
     });
     peer.on("open", (id) => {
