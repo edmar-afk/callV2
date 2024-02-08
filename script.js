@@ -2,7 +2,7 @@ const PRE = "JHCSC";
 const SUF = "MEET";
 const ICE_SERVERS = [
   { url: 'stun:freeturn.net:5349' }, 
- { url: 'turns:freeturn.tel:5349', username: 'free', credential: 'free' } ]
+  { url: 'turns:freeturn.tel:5349', username: 'free', credential: 'free' }
 ];
 var room_id;
 var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
